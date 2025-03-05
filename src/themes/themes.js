@@ -1,5 +1,6 @@
 export default {
     beach: {
+        name: "beach",
         puzzles: [
             {
                 id: 1,
@@ -175,9 +176,10 @@ export default {
         ],
     },
     lotus: {
+        name: "lotus",
         puzzles: [
             {
-                id: 1,
+                id: 4,
                 correct_order: [
                     "1",
                     "2",
@@ -234,7 +236,7 @@ export default {
                 ],
             },
             {
-                id: 2,
+                id: 5,
                 correct_order: [
                     "1",
                     "2",
@@ -291,7 +293,7 @@ export default {
                 ],
             },
             {
-                id: 3,
+                id: 6,
                 correct_order: [
                     "1",
                     "2",
@@ -350,9 +352,10 @@ export default {
         ],
     },
     cascade: {
+        name: "cascade",
         puzzles: [
             {
-                id: 1,
+                id: 10,
                 correct_order: [
                     "1",
                     "2",
@@ -409,7 +412,7 @@ export default {
                 ],
             },
             {
-                id: 2,
+                id: 11,
                 correct_order: [
                     "1",
                     "2",
@@ -466,7 +469,7 @@ export default {
                 ],
             },
             {
-                id: 3,
+                id: 12,
                 correct_order: [
                     "1",
                     "2",
@@ -525,9 +528,10 @@ export default {
         ],
     },
     meditation: {
+        name: "meditation",
         puzzles: [
             {
-                id: 1,
+                id: 7,
                 correct_order: [
                     "1",
                     "2",
@@ -584,7 +588,7 @@ export default {
                 ],
             },
             {
-                id: 2,
+                id: 8,
                 correct_order: [
                     "1",
                     "2",
@@ -641,7 +645,7 @@ export default {
                 ],
             },
             {
-                id: 3,
+                id: 9,
                 correct_order: [
                     "1",
                     "2",
@@ -699,5 +703,4 @@ export default {
             },
         ],
     },
-
 };
