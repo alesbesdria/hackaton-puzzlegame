@@ -1,8 +1,5 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-// import themeBackground1 from "../assets/themes/beach-1.jpg"; // a changer pluxs tard avec les images qui viennent de l'objet
-// import themeBackground2 from "../assets/themes/beach-2.jpg"; // a changer pluxs tard avec les images qui viennent de l'objet
-// import themeBackground3 from "../assets/themes/beach-3.jpg"; // a changer pluxs tard avec les images qui viennent de l'objet
 import Modal from "../components/Modal";
 import "../css/gamepage.css";
 
