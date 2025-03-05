@@ -5,7 +5,7 @@ export default function Accueil() {
     <>
       <div className="background">
         <div className="container">
-          <h1 className="title">Puzzen</h1>
+          <h1 className="title">PUZZEN</h1>
           <p className="explication">
             Bienvenue dans notre jeu ! Détendez-vous et profitez des magnifiques
             paysages naturels tout en s'amusant
