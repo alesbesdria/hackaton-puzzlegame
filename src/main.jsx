@@ -7,7 +7,6 @@ import GamePage from "./pages/GamePage.jsx";
 import Homepage from "./pages/Homepage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import themes from "./themes/themes.js";
-console.log(themes);
 
 const router = createBrowserRouter([
     {
