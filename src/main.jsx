@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import "./index.css";
 import Homepage from "./pages/Homepage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
+import GamePage from "./pages/GamePage.jsx";
 
 const router = createBrowserRouter([
     {
@@ -14,7 +15,10 @@ const router = createBrowserRouter([
                 path: "/",
                 element: <Homepage />,
             },
-            // mettre les routes ici **************************************************
+            {
+                path: "gamepage",
+                element: <GamePage />,
+            },
             {
                 path: "*",
                 element: <NotFoundPage />,
