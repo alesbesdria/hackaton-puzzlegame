@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700');
+
+@font-face {
+    font-family: "SaintAndrew";
+    src:  url("../assets/font/SaintAndrewdesKiwis.ttf") format("opentype");
+     
+  }
 
 .background{
     background-image: url('../../public/Background_Sakura.png');
@@ -31,13 +37,14 @@
 h1{
     font-size: 4rem;
     padding-top: 8%;
-    font-family: karla;
+    font-family: SaintAndrew;
+    src: url('../assets/font/SaintAndrewdesKiwis.ttf');
 }
 p{
     font-size: 2.2rem;
     text-align: center;
     max-width: 80vh;
     padding-top: 8%;
-    font-family: karla;
+    font-family: dancing script;
 }
 
