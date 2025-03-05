@@ -1,18 +1,19 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
-import themeBackground1 from "../assets/themes/beach-1.jpg";
-import themeBackground2 from "../assets/themes/beach-2.jpg";
-import themeBackground3 from "../assets/themes/beach-3.jpg";
+import { useLoaderData } from "react-router-dom";
+import themeBackground1 from "../assets/themes/beach-1.jpg"; // a changer pluxs tard avec les images qui viennent de l'objet
+import themeBackground2 from "../assets/themes/beach-2.jpg"; // a changer pluxs tard avec les images qui viennent de l'objet
+import themeBackground3 from "../assets/themes/beach-3.jpg"; // a changer pluxs tard avec les images qui viennent de l'objet
 import Modal from "../components/Modal";
 import "../css/gamepage.css";
-import theme from "../themes/beach.js";
 
 export default function GamePage() {
-    // const {theme} = useParams();
+    const theme = useLoaderData();
     console.log(theme);
 
-    const [modaleIsVisible, setModale] = useState(true);
+    const [modaleIsVisible, setModale] = useState(false);
     const [puzzle, setPuzzle] = useState(theme.puzzles[0]);
+
+    function handleClickPuzzleToggler(index) {}
 
     return (
         <section className="game-section">
@@ -35,9 +36,15 @@ export default function GamePage() {
                 />
             </div>
 
-            <button className="game-section__clickable game-section__clickable--1"></button>
-            <button className="game-section__clickable game-section__clickable--2"></button>
-            <button className="game-section__clickable game-section__clickable--3"></button>
+            <button
+                onClick={() => handleClickPuzzleToggler(0)}
+                className="game-section__clickable game-section__clickable--1"></button>
+            <button
+                onClick={() => handleClickPuzzleToggler(1)}
+                className="game-section__clickable game-section__clickable--2"></button>
+            <button
+                onClick={() => handleClickPuzzleToggler(2)}
+                className="game-section__clickable game-section__clickable--3"></button>
 
             {modaleIsVisible && <Modal puzzle={puzzle} />}
         </section>
