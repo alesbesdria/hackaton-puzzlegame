@@ -1,9 +1,17 @@
 import "../css/Home.css";
 import { useState } from "react";
-// import RetourAccueil from "../components/RetourAccueil";
+import { useNavigate } from "react-router-dom";
 
 export default function Accueil() {
   const [selectedTheme, setSelectedTheme] = useState("");
+  const navigateToGame = useNavigate();
+  const handlePlay = () => {
+    if (selectedTheme) {
+      navigateToGame(`/GamePage/${selectedTheme}`);
+    } else {
+      alert("Veuillez choisir un thème");
+    }
+  }
 
   return (
     <>
@@ -15,19 +23,19 @@ export default function Accueil() {
             paysages naturels tout en s'amusant
           </p>
           <div className="select-game">
-            <button className="button-play">Jouer</button>
+            <button className="button-play" onClick={handlePlay}>Jouer</button>
             <select
               className="select-theme"
               id=""
               value={selectedTheme}
               onChange={(e) => setSelectedTheme(e.target.value)}
             >
-              <option value=""> Lotus 🪷</option>
-              <option value="">Plage 🏖️</option>
-              <option value="">Cascade 🏞️</option>
-              <option value="">Méditation 🧘‍♂️</option>
+              <option value="">-- Choisissez un thème --</option>
+              <option value="lotus"> Lotus 🪷</option>
+              <option value="plage">Plage 🏖️</option>
+              <option value="cascade">Cascade 🏞️</option>
+              <option value="méditation">Méditation 🧘‍♂️</option>
             </select>
-      {/* <RetourAccueil/> */}
           </div>
         </div>
       </div>

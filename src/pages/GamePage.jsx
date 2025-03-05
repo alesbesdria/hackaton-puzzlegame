@@ -6,6 +6,7 @@ import Modal from "../components/Modal";
 import "../css/gamepage.css";
 import { useParams } from "react-router-dom";
 import theme from "../themes/themes.js";
+import RetourAccueil from "../components/RetourAccueil";
 
 export default function GamePage() {
 
@@ -13,11 +14,12 @@ export default function GamePage() {
 console.log(theme);
 
 
-    const [modaleIsVisible, setModale] = useState(true);
+    const [modaleIsVisible, setModale] = useState(false);
     const [puzzle, setPuzzle] = useState(theme.puzzles[0]);
     
     return (
         <section className="game-section">
+            <RetourAccueil />
             <div className="game-section__subsection game-section__subsection--1">
                 <img
                     src={themeBackground1}
@@ -36,13 +38,11 @@ console.log(theme);
                     alt=""
                 />
             </div>
-
             <button className="game-section__clickable game-section__clickable--1"></button>
             <button className="game-section__clickable game-section__clickable--2"></button>
             <button className="game-section__clickable game-section__clickable--3"></button>
 
         {modaleIsVisible && <Modal puzzle = {puzzle} />}
-
         </section>
     );
 }
