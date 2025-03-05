@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import Modal from "../components/Modal";
 import "../css/gamepage.css";
+import RetourAccueil from "../components/RetourAccueil";
+
 
 export default function GamePage() {
     const theme = useLoaderData();
@@ -14,8 +16,12 @@ export default function GamePage() {
         setModaleIsVisible(true);
     }
 
+
+
     return (
         <section className={`game-section game-section--${theme.name}`}>
+                    <RetourAccueil />
+
             {visibleTiles.every((i) => i) ? (
                 <div className="game-section__video-container">
                     <video

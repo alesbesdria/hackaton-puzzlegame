@@ -2,11 +2,12 @@
 
 @font-face {
     font-family: "SaintAndrew";
-    src: url("../assets/font/SaintAndrewdesKiwis.ttf") format("opentype");
-}
+    src:  url("../assets/font/SaintAndrewdesKiwis.ttf") format("opentype");
+  }
 
-.background {
-    background-image: url("../../public/Background_Sakura.png");
+.background{
+    background-image: url('../Background_Sakura.png');
+
     height: 100vh;
     background-size: cover;
     display: flex;
@@ -27,9 +28,8 @@
     max-width: 85%;
     max-height: 30%;
     border-radius: 8px;
-    width: 180px;
+    width: 265px;
     height: 10%;
-    margin-top: 30%;
     font-size: 1.3rem;
     background: rgba(255, 255, 255);
 }
@@ -37,7 +37,8 @@ h1 {
     font-size: 4rem;
     padding-top: 8%;
     font-family: SaintAndrew;
-    src: url("../assets/font/SaintAndrewdesKiwis.ttf");
+    text-align: center;
+
 }
 p {
     font-size: 2.2rem;
@@ -45,6 +46,7 @@ p {
     max-width: 80vh;
     padding-top: 8%;
     font-family: dancing script;
+    margin-inline: auto;
 }
 
 .button-play {
@@ -53,15 +55,16 @@ p {
     border-radius: 8px;
     width: 98px;
     height: 10%;
-    margin-top: 30%;
     font-size: 1.3rem;
     background: rgba(255, 255, 255);
 }
 
 .select-game {
-    padding: 64px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     gap: 25px;
+    padding: 10%;
+    border: none;
 }
+
