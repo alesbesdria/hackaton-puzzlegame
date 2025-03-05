@@ -5,7 +5,7 @@ import themeBackground3 from "../assets/themes/beach-3.jpg";
 import Modal from "../components/Modal";
 import "../css/gamepage.css";
 import { useParams } from "react-router-dom";
-import theme from "../themes/beach.js";
+import theme from "../themes/themes.js";
 
 export default function GamePage() {
 
