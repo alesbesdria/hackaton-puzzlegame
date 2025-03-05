@@ -8,12 +8,12 @@ import "../css/gamepage.css";
 
 export default function GamePage() {
     const theme = useLoaderData();
-    console.log(theme);
 
-    const [modaleIsVisible, setModale] = useState(false);
+    const [modaleIsVisible, setModaleIsVisible] = useState(false);
     const [puzzle, setPuzzle] = useState(theme.puzzles[0]);
+    const [visibleTiles, setVisibleTiles] = useState([false, false, false]);
 
-    function handleClickPuzzleToggler(index) {}
+    function handleClickPuzzleToggler() {}
 
     return (
         <section className="game-section">
@@ -46,7 +46,13 @@ export default function GamePage() {
                 onClick={() => handleClickPuzzleToggler(2)}
                 className="game-section__clickable game-section__clickable--3"></button>
 
-            {modaleIsVisible && <Modal puzzle={puzzle} />}
+            {modaleIsVisible && (
+                <Modal
+                    puzzle={puzzle}
+                    setModaleIsVisible={setModaleIsVisible}
+                    setVisibleTiles={setVisibleTiles}
+                />
+            )}
         </section>
     );
 }

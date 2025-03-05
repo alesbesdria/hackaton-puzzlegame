@@ -1,45 +1,58 @@
-import { useState } from 'react';
-import './Modal.css';
+import { useState } from "react";
+import "./Modal.css";
 
+export default function Modal({ puzzle, setModaleIsVisible, setVisibleTiles }) {
+    const [order, setOrder] = useState(puzzle.order);
+    const [selectedPieces, setSelectedPieces] = useState([]);
 
-export default function Modal({puzzle}) {
-const [order, setOrder] = useState(puzzle.order);
-const [selectedPieces, setSelectedPieces] = useState([])
+    function handleClickPiece(imgId) {
+//
+        const newSelectedPieces = [...selectedPieces, imgId];
+        setSelectedPieces(newSelectedPieces);
 
-console.log(puzzle);
-
-function handleClickPiece(imgId){
-    // stocker imgId dans selectedPieces
-    const selectedPieces = [];
-    selectedPieces =+ selectedPieces(imgId);
-    // si selectedPieces.length 2, faire le switch, puis vider selectedPieces (appeler switchPieces)
-    if (selectedPieces.length == 2){
-        switchPieces(); //
+        if (newSelectedPieces.length === 2) {
+            switchPieces(newSelectedPieces[0], newSelectedPieces[1]);
+            setSelectedPieces([]);
+        }
     }
-    // sinon rien
-    
-}
 
-function switchPieces(a, b) {
-    // switch les pieces dans order
-    setOrder(([a, b]) => [b, a]);
-    // compare order à puzzle.correct_order
-    // si identique, fermer la modale, afficher un tiers de l'image
-    // sinon rien
-}
-    
-    return <>
-        <div className='modal'>
-            <div className="puzzle">
+    function switchPieces(a, b) {
+        const indexA = order.indexOf(a);
+        const indexB = order.indexOf(b);
 
-                {order.map((img)=> {
-                    return <img onClick={() => handleClickPiece(img)} src={`/puzzles/${puzzle.id}-${img}.jpg`} alt="" />
-                    // 
-                }
-                )}
+        const newOrder = [...order];
+        newOrder[indexA] = b;
+        newOrder[indexB] = a;
+console.log(newOrder);
 
+        setOrder(newOrder);
+
+        if (newOrder.every((value, index) => value === puzzle.correct_order[index])) {
+                setModaleIsVisible(false);
+
+                setVisibleTiles((prev) => {
+                    const newTiles = [...prev];
+                    newTiles[puzzle.index] = true;
+                    return newTiles;
+                });
+        }
+    }
+
+    return (
+        <div className="modal-container">
+            <div className="modal">
+                <div className="puzzle">
+                    {order.map((img) => (
+                        <img
+                            key={img}
+                            className="images-puzzle"
+                            onClick={() => handleClickPiece(img)}
+                            src={`/puzzles/${puzzle.id}-${img}.jpg`}
+                            alt=""
+                        />
+                    ))}
+                </div>
             </div>
         </div>
-    </>
-    
+    );
 }
