@@ -33,9 +33,9 @@ export default function Accueil() {
             >
               <option value="">-- Choisissez un thème --</option>
               <option value="lotus"> Lotus 🪷</option>
-              <option value="plage">Plage 🏖️</option>
+              <option value="beach">Plage 🏖️</option>
               <option value="cascade">Cascade 🏞️</option>
-              <option value="méditation">Méditation 🧘‍♂️</option>
+              <option value="meditation">Méditation 🧘‍♂️</option>
             </select>
           </div>
         </div>

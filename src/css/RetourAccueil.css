@@ -1,6 +1,5 @@
 
 .retour-accueil {
-  position: relative;
   background: #fec195;
   font-weight: 500;
   color: #181818;
@@ -8,8 +7,11 @@
   border: 1px solid #fec195;
   border-radius: 8px;
   filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
-  width: 40%;
-  height: 10%;
+  /* width: 40%;
+  height: 10%; */
+  width: fit-content;
+  height: fit-content;
+  padding: 16px 32px;
   position: relative;
   left: 135%;
   z-index: 1;
