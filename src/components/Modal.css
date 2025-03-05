@@ -1,0 +1,12 @@
+.modal {
+    background-color: blueviolet;
+    height: 800px;
+    width: 1000px;
+    /* background: rgba(255, 255, 255, 0.6); background a mettre une fois le fond rajouté ! */
+}
+
+.puzzle {
+    color: white;
+    height: 700px;
+    width: 700px;
+}
