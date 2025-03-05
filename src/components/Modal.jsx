@@ -48,7 +48,6 @@ export default function Modal({ puzzle, setModaleIsVisible, setVisibleTiles }) {
                                 onClick={() => handleClickPiece(img)}
                                 src={`/puzzles/${puzzle.id}-${img}.jpg`}
                                 alt=""
-                                style={isSelected ? { transform: 'scale(1.1)' } : {}}
                             />
                         );
                     })}

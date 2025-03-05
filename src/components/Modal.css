@@ -34,3 +34,28 @@
     height: 100%;
     width: 100%;
 }
+
+.images-puzzle.clicked {
+    animation: rotation ease-out 0.8s;
+  }
+
+  @keyframes rotation {
+    0%{
+    filter: brightness(1);
+    transform: scale(1);
+    }
+    25%{
+    transform: scale(1.1);
+    }
+    50%{
+    filter: brightness(2);
+    transform: scale(1);
+    }
+    75%{
+    transform: scale(1.1);
+    }
+    100%{
+    filter: brightness(1);
+    transform: scale(1);
+    }
+  }
