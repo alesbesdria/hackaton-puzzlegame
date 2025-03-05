@@ -20,7 +20,6 @@
 }
 
 .puzzle {
-    background-color: white;
     height: 500px;
     width: 500px;
     z-index: 11;
@@ -33,10 +32,12 @@
     border: 1px black solid;
     height: 100%;
     width: 100%;
+    cursor: pointer;
 }
 
 .images-puzzle.clicked {
-    animation: rotation ease-out 0.8s;
+    animation: rotation ease-out infinite 2s;
+    border-radius: 4px;
   }
 
   @keyframes rotation {
@@ -45,14 +46,14 @@
     transform: scale(1);
     }
     25%{
-    transform: scale(1.1);
+    transform: scale(1.05);
     }
     50%{
     filter: brightness(2);
     transform: scale(1);
     }
     75%{
-    transform: scale(1.1);
+    transform: scale(1.05);
     }
     100%{
     filter: brightness(1);
