@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Modal from "../components/Modal";
-import "../css/gamepage.css";
 import RetourAccueil from "../components/RetourAccueil";
-
+import "../css/gamepage.css";
 
 export default function GamePage() {
     const theme = useLoaderData();
@@ -16,11 +15,9 @@ export default function GamePage() {
         setModaleIsVisible(true);
     }
 
-
-
     return (
         <section className={`game-section game-section--${theme.name}`}>
-                    <RetourAccueil />
+            <RetourAccueil />
 
             {visibleTiles.every((i) => i) ? (
                 <div className="game-section__video-container">
@@ -67,7 +64,28 @@ export default function GamePage() {
                         />
                     </div>
 
-                    {!visibleTiles[0] && (
+                    {!visibleTiles[0] &&
+                        theme.clickables_position.map((position, index) => {
+                            return (
+                                <button
+                                    onClick={() =>
+                                        handleClickPuzzleToggler(index)
+                                    }
+                                    className="game-section__clickable game-section__clickable--1"
+                                    style={position}></button>
+                            );
+                        })}
+                    {/* {!visibleTiles[1] && (
+                        <button
+                            onClick={() => handleClickPuzzleToggler(1)}
+                            className="game-section__clickable game-section__clickable--2"></button>
+                    )}
+                    {!visibleTiles[2] && (
+                        <button
+                            onClick={() => handleClickPuzzleToggler(2)}
+                            className="game-section__clickable game-section__clickable--3"></button>
+                    )} */}
+                    {/* {!visibleTiles[0] && (
                         <button
                             onClick={() => handleClickPuzzleToggler(0)}
                             className="game-section__clickable game-section__clickable--1"></button>
@@ -81,7 +99,7 @@ export default function GamePage() {
                         <button
                             onClick={() => handleClickPuzzleToggler(2)}
                             className="game-section__clickable game-section__clickable--3"></button>
-                    )}
+                    )} */}
                 </>
             )}
 
