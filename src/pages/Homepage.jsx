@@ -1,3 +1,18 @@
-export default function Homepage() {
-    return <h2>Homepage</h2>;
+import '../css/Home.css'
+
+export default function Accueil() {
+  return (
+    <>
+      <div className="background">
+        <div className='container'>
+          <h1 className="title">Puzzen</h1>
+          <p className="explication">
+            Bienvenue dans notre jeu ! Détendez-vous et profitez des magnifiques
+            paysages naturels tout en s'amusant
+          </p>
+          <button className='button-theme'>Choisissez votre thème</button>
+        </div>
+      </div>
+    </>
+  );
 }
