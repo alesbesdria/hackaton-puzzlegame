@@ -29,7 +29,7 @@
     border-radius: 8px;
     width: 180px;
     height: 10%;
-    margin-top: 50%;
+    margin-top: 30%;
     font-size: 1.3rem;
     background: rgba(255, 255, 255);
 }
@@ -46,3 +46,21 @@ p {
     padding-top: 8%;
     font-family: dancing script;
 }
+
+.button-play{
+    max-width: 85%;
+    max-height: 30%;
+    border-radius: 8px;
+    width: 98px;
+    height: 10%;
+    margin-top: 30%;
+    font-size: 1.3rem;
+    background: rgba(255, 255, 255);
+}
+
+.select-game{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 25px;
+}
+
