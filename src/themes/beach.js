@@ -1,6 +1,10 @@
 export default {
     name: "beach",
+<<<<<<< HEAD
     quizzes: [
+=======
+    puzzles: [
+>>>>>>> 21a9ea1b02eb599d19d44511596965722968367b
         {
             id: 1,
             correct_order: [
