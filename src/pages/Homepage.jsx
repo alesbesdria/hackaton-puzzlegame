@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Accueil() {
+
   const [selectedTheme, setSelectedTheme] = useState("");
   const navigateToGame = useNavigate();
   const handlePlay = () => {
