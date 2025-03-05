@@ -1,0 +1,21 @@
+.modal {
+    border-radius: 20px;
+    height: 800px;
+    width: 1000px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle {
+    background-color: white;
+    height: 700px;
+    width: 700px;
+    z-index: 11;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
