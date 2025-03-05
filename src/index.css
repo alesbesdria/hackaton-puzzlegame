@@ -24,10 +24,6 @@ a {
 
 :root {
     /* fonts */
-    --ff-main: "Open Sans", sans-serif;
+    --ff-main: ;
     --ff-title: ;
-}
-
-body {
-    font-family: var(--ff-main);
 }

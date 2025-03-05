@@ -1,9 +1,24 @@
 .game-section {
     position: relative;
     height: 100vh;
-    background: url("../assets/themes/beach-background-3.jpg") center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.game-section--beach {
+    background: url("../assets/themes/beach-background-3.jpg") center;
+}
+
+.game-section--meditation {
+    background: url("../assets/themes/meditation-background-3.jpg") center;
+}
+
+.game-section--lotus {
+    background: url("../assets/themes/lotus-background-3.jpg") center;
+}
+
+.game-section--cascade {
+    background: url("../assets/themes/cascade-background-3.jpg") center;
 }
 
 .game-section__subsection {
@@ -26,8 +41,8 @@
     width: 100px;
     height: 100px;
     cursor: pointer;
-    backdrop-filter: blur(5px);
-    /* opacity: 0; */
+    backdrop-filter: blur(2px) invert(220%);
+    opacity: 0;
     transition: opacity 0.2s ease-out;
 }
 
@@ -48,4 +63,18 @@
 .game-section__clickable--3 {
     top: 52%;
     left: 75%;
+}
+
+.game-section__video-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-section__video-background {
+    width: 100%;
 }
