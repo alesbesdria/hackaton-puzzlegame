@@ -6,7 +6,6 @@ export default function Modal({ puzzle, setModaleIsVisible, setVisibleTiles }) {
     const [selectedPieces, setSelectedPieces] = useState([]);
 
     function handleClickPiece(imgId) {
-//
         const newSelectedPieces = [...selectedPieces, imgId];
         setSelectedPieces(newSelectedPieces);
 
@@ -23,18 +22,16 @@ export default function Modal({ puzzle, setModaleIsVisible, setVisibleTiles }) {
         const newOrder = [...order];
         newOrder[indexA] = b;
         newOrder[indexB] = a;
-console.log(newOrder);
-
         setOrder(newOrder);
 
         if (newOrder.every((value, index) => value === puzzle.correct_order[index])) {
-                setModaleIsVisible(false);
+            setModaleIsVisible(false);
 
-                setVisibleTiles((prev) => {
-                    const newTiles = [...prev];
-                    newTiles[puzzle.index] = true;
-                    return newTiles;
-                });
+            setVisibleTiles((prev) => {
+                const newTiles = [...prev];
+                newTiles[puzzle.index] = true;
+                return newTiles;
+            });
         }
     }
 
@@ -42,15 +39,18 @@ console.log(newOrder);
         <div className="modal-container">
             <div className="modal">
                 <div className="puzzle">
-                    {order.map((img) => (
-                        <img
-                            key={img}
-                            className="images-puzzle"
-                            onClick={() => handleClickPiece(img)}
-                            src={`/puzzles/${puzzle.id}-${img}.jpg`}
-                            alt=""
-                        />
-                    ))}
+                    {order.map((img) => {
+                        const isSelected = selectedPieces.includes(img);
+                        return (
+                            <img
+                                key={img}
+                                className={`images-puzzle ${isSelected ? 'clicked' : ''}`}
+                                onClick={() => handleClickPiece(img)}
+                                src={`/puzzles/${puzzle.id}-${img}.jpg`}
+                                alt=""
+                            />
+                        );
+                    })}
                 </div>
             </div>
         </div>
