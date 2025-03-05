@@ -1,0 +1,51 @@
+.game-section {
+    position: relative;
+    height: 100vh;
+    background: url("../assets/themes/beach-background-3.jpg") center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.game-section__subsection {
+    overflow: hidden;
+    opacity: 0;
+}
+
+.game-section__subsection img {
+    width: 100%;
+}
+
+.game-section__subsection--visible {
+    opacity: 1;
+}
+
+.game-section__clickable {
+    background: none;
+    position: absolute;
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    /* opacity: 0; */
+    transition: opacity 0.2s ease-out;
+}
+
+.game-section__clickable:hover {
+    opacity: 1;
+}
+
+.game-section__clickable--1 {
+    top: 20%;
+    left: 12%;
+}
+
+.game-section__clickable--2 {
+    bottom: 10%;
+    left: 65%;
+}
+
+.game-section__clickable--3 {
+    top: 52%;
+    left: 75%;
+}
