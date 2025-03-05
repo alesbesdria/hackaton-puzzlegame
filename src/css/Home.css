@@ -47,7 +47,7 @@ p {
     font-family: dancing script;
 }
 
-.button-play{
+.button-play {
     max-width: 85%;
     max-height: 30%;
     border-radius: 8px;
@@ -58,9 +58,10 @@ p {
     background: rgba(255, 255, 255);
 }
 
-.select-game{
+.select-game {
+    padding: 64px;
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
     gap: 25px;
 }
-
