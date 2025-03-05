@@ -14,7 +14,7 @@ function handleClickPiece(imgId){
     selectedPieces =+ selectedPieces(imgId);
     // si selectedPieces.length 2, faire le switch, puis vider selectedPieces (appeler switchPieces)
     if (selectedPieces.length == 2){
-        switchPieces();
+        switchPieces(); //
     }
     // sinon rien
     
