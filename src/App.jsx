@@ -1,16 +1,22 @@
 import { Outlet } from "react-router-dom";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import { createContext, useState } from 'react';
 
+const ThemeContext = createContext(null);
+export { ThemeContext };
 function App() {
+    const [themeUnlock, setThemeUnlock] = useState({
+        lotus: true,
+        beach: true,
+        cascade: true,
+        meditation: true,
+      });
+      
     return (
-        <>
-            <Header />
             <main>
+            <ThemeContext.Provider value={{themeUnlock, setThemeUnlock}}>
                 <Outlet />
+                </ThemeContext.Provider>
             </main>
-            <Footer />
-        </>
     );
 }
 
