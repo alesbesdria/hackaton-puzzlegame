@@ -25,7 +25,6 @@ export default function Accueil() {
       setSelectedThemeVideo(theme);
     }
   };
-
   const { themeUnlock, setThemeUnlock } = useContext(ThemeContext);
 
   return (
@@ -78,6 +77,14 @@ export default function Accueil() {
           <p className="explication">
             Bienvenue dans notre jeu ! Détendez-vous, profitez des magnifiques
             paysages naturels tout en s'amusant ! 🌺
+          </p>
+          <p className="but-game">
+            But du jeu : Une fois votre thème choisi, cherchez les trois
+            éléments cachés afin de pouvoir jouer.
+          </p>
+          <p className="but-game1">
+            Débloquez des thèmes pour personnaliser à votre guise la page
+            d'accueil.
           </p>
           <div className="select-game">
             <button className="button-play" onClick={handlePlay}>

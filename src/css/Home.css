@@ -45,7 +45,7 @@ h1 {
     font-size: 2.2rem;
     text-align: center;
     max-width: 80vh;
-    padding-top: 8%;
+    padding-top: 3%;
     font-family: dancing script;
     margin-inline: auto;
 }
@@ -65,7 +65,7 @@ h1 {
     flex-direction: row-reverse;
     justify-content: center;
     gap: 25px;
-    padding: 10%;
+    padding: 5%;
     border: none;
 }
 
@@ -113,4 +113,19 @@ h1 {
 .credits__link:hover::after {
     background: #f52952;
     transform: scale(0.8);
+}
+
+.but-game{
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 80vh;
+    padding-top: 3%;
+    margin-inline: auto;
+    font-weight: 500;
+}
+.but-game1{
+    font-size: 1.1rem;
+    text-align: center;
+    padding-top: 1%;
+    font-weight: 500;
 }
