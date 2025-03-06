@@ -39,6 +39,12 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+    position: fixed;
+    left: 6%;
+    width: 90%;
+    height: 93%;
+    top: 21px;
 }
 
 .modal-video-close-button{
