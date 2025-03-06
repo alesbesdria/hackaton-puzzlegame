@@ -1,0 +1,54 @@
+.button-container{
+    display: flex;
+    flex-direction: raw;
+    justify-content: center;
+    /* margin-top: 20px; 
+    margin-top: -450px;
+    gap: 15px;
+    margin-left: -15px; */
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.btn{
+    height: 30px;
+    width: 100px;
+    border-radius: 8px;
+    gap: 10px;
+    border: none;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    scale: 1.1;
+    background: linear-gradient(145deg, #A8E6CF, #DCEDC1, #FFD3B6, #FFAAA5);
+    padding: 10px, 20px;
+}
+.video-container{
+    border-radius: 20px;
+    height: 650px;
+    width: 1400px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-video-close-button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+
+}
