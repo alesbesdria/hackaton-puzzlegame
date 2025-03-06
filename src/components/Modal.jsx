@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./Modal.css";
+import cross from '/src/assets/icons/cross-mark-304374_640.png';
 
 export default function Modal({ puzzle, setModaleIsVisible, setVisibleTiles }) {
     const [order, setOrder] = useState(puzzle.order);
     const [selectedPieces, setSelectedPieces] = useState([]);
+    const [messageVisible, setMessageVisible] = useState(false);
 
     function handleClickPiece(imgId) {
         const newSelectedPieces = [...selectedPieces, imgId];
@@ -25,7 +27,7 @@ export default function Modal({ puzzle, setModaleIsVisible, setVisibleTiles }) {
         setOrder(newOrder);
 
         if (newOrder.every((value, index) => value === puzzle.correct_order[index])) {
-            setModaleIsVisible(false);
+            setMessageVisible(true);
 
             setVisibleTiles((prev) => {
                 const newTiles = [...prev];
@@ -38,6 +40,15 @@ export default function Modal({ puzzle, setModaleIsVisible, setVisibleTiles }) {
     return (
         <div className="modal-container">
             <div className="modal">
+                <img 
+                className="cross" 
+                src={cross} 
+                alt="croix fermeture" 
+                onClick={() => setModaleIsVisible(false)}
+                />
+                <span className={`finish-message ${messageVisible ? 'finish' : ''}`}>
+                    Félicitations, vous avez terminé le puzzle !
+                </span>
                 <div className="puzzle">
                     {order.map((img) => {
                         const isSelected = selectedPieces.includes(img);
@@ -47,7 +58,7 @@ export default function Modal({ puzzle, setModaleIsVisible, setVisibleTiles }) {
                                 className={`images-puzzle ${isSelected ? 'clicked' : ''}`}
                                 onClick={() => handleClickPiece(img)}
                                 src={`/puzzles/${puzzle.id}-${img}.jpg`}
-                                alt=""
+                                alt="pièce de puzzle"
                             />
                         );
                     })}

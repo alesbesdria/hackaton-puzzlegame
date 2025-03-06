@@ -8,15 +8,28 @@
 }
 
 .modal {
+    position: relative;
     border-radius: 20px;
     height: 650px;
     width: 800px;
     background: rgba(0, 0, 0, 0.7);
     z-index: 10;
     display: flex;
-    align-content: center;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.cross{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    z-index: 20;
+    display: flex;
+    align-self: flex-end;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
 }
 
 .puzzle {
@@ -26,6 +39,21 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
+}
+
+.finish-message{
+    display: none;
+}
+
+.finish-message.finish{
+    display: flex;
+    font-family: Dancing Script;
+    font-size: 35px;
+    font-weight: bold;
+    z-index: 20;
+    color: White;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .images-puzzle{
