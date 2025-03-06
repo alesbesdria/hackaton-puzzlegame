@@ -1,11 +1,13 @@
 import "../css/Home.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ModalVideo from "../components/ModalVideo";
 
 export default function Accueil() {
 
   const [selectedTheme, setSelectedTheme] = useState("");
   const navigateToGame = useNavigate();
+  
   const handlePlay = () => {
     if (selectedTheme) {
       navigateToGame(`/GamePage/${selectedTheme}`);
@@ -17,11 +19,13 @@ export default function Accueil() {
   return (
     <>
       <div className="background">
+    <ModalVideo/>
         <div className="container">
+         
           <h1 className="title">PUZZEN</h1>
           <p className="explication">
-            Bienvenue dans notre jeu ! Détendez-vous et profitez des magnifiques
-            paysages naturels tout en s'amusant
+            Bienvenue dans notre jeu ! Détendez-vous, profitez des magnifiques
+            paysages naturels tout en s'amusant ! 🌺
           </p>
           <div className="select-game">
             <button className="button-play" onClick={handlePlay}>Jouer</button>
@@ -30,7 +34,7 @@ export default function Accueil() {
               id=""
               value={selectedTheme}
               onChange={(e) => setSelectedTheme(e.target.value)}
-            >
+              >
               <option value="">-- Choisissez un thème --</option>
               <option value="lotus"> Lotus 🪷</option>
               <option value="beach">Plage 🏖️</option>
