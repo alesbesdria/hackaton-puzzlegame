@@ -1,9 +1,24 @@
 export default {
     beach: {
         name: "beach",
+        clickables_position: [
+            {
+                top: "20%",
+                left: "12%",
+            },
+            {
+                bottom: "10%",
+                left: "65%",
+            },
+            {
+                top: "52%",
+                left: "75%",
+            },
+        ],
         puzzles: [
             {
                 id: 1,
+                index: 0,
                 correct_order: [
                     "1",
                     "2",
@@ -61,6 +76,8 @@ export default {
             },
             {
                 id: 2,
+                index: 1,
+
                 correct_order: [
                     "1",
                     "2",
@@ -118,6 +135,7 @@ export default {
             },
             {
                 id: 3,
+                index: 2,
                 correct_order: [
                     "1",
                     "2",
@@ -177,9 +195,24 @@ export default {
     },
     lotus: {
         name: "lotus",
+        clickables_position: [
+            {
+                bottom: "30%",
+                left: "80%",
+            },
+            {
+                bottom: "30%",
+                left: "42%",
+            },
+            {
+                top: "3%",
+                left: "5%",
+            },
+        ],
         puzzles: [
             {
                 id: 4,
+                index: 0,
                 correct_order: [
                     "1",
                     "2",
@@ -237,6 +270,7 @@ export default {
             },
             {
                 id: 5,
+                index: 1,
                 correct_order: [
                     "1",
                     "2",
@@ -294,6 +328,7 @@ export default {
             },
             {
                 id: 6,
+                index: 2,
                 correct_order: [
                     "1",
                     "2",
@@ -353,9 +388,24 @@ export default {
     },
     cascade: {
         name: "cascade",
+        clickables_position: [
+            {
+                bottom: "0",
+                left: "12%",
+            },
+            {
+                top: "22%",
+                left: "33%",
+            },
+            {
+                top: "52%",
+                left: "75%",
+            },
+        ],
         puzzles: [
             {
                 id: 10,
+                index: 0,
                 correct_order: [
                     "1",
                     "2",
@@ -413,6 +463,7 @@ export default {
             },
             {
                 id: 11,
+                index: 1,
                 correct_order: [
                     "1",
                     "2",
@@ -470,6 +521,7 @@ export default {
             },
             {
                 id: 12,
+                index: 2,
                 correct_order: [
                     "1",
                     "2",
@@ -529,9 +581,24 @@ export default {
     },
     meditation: {
         name: "meditation",
+        clickables_position: [
+            {
+                top: "46%",
+                left: "42%",
+            },
+            {
+                bottom: "0%",
+                left: "0%",
+            },
+            {
+                top: "16%",
+                left: "75%",
+            },
+        ],
         puzzles: [
             {
                 id: 7,
+                index: 0,
                 correct_order: [
                     "1",
                     "2",
@@ -589,6 +656,7 @@ export default {
             },
             {
                 id: 8,
+                index: 1,
                 correct_order: [
                     "1",
                     "2",
@@ -646,6 +714,7 @@ export default {
             },
             {
                 id: 9,
+                index: 2,
                 correct_order: [
                     "1",
                     "2",

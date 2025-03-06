@@ -24,6 +24,7 @@
 .game-section__subsection {
     overflow: hidden;
     opacity: 0;
+    border: 1px solid red;
 }
 
 .game-section__subsection img {
@@ -48,21 +49,6 @@
 
 .game-section__clickable:hover {
     opacity: 1;
-}
-
-.game-section__clickable--1 {
-    top: 20%;
-    left: 12%;
-}
-
-.game-section__clickable--2 {
-    bottom: 10%;
-    left: 65%;
-}
-
-.game-section__clickable--3 {
-    top: 52%;
-    left: 75%;
 }
 
 .game-section__video-container {
