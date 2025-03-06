@@ -73,10 +73,7 @@ h1 {
     width: 100%;
     height: 100%;
     top: 150px;
-    /* background: rgba(0, 0, 0, 0.5); */
-    
 }
-
 
 .credits {
     position: absolute;
@@ -100,8 +97,6 @@ h1 {
 .credits__link {
     position: relative;
     transition: color 0.2s ease-out;
-    /* text-decoration: underline;
-    text-underline-offset: 2px; */
 }
 
 .credits__link::after {

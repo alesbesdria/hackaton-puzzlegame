@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../css/Home.css";
 import ModalVideo from "../components/ModalVideo";
+import "../css/Home.css";
 
 export default function Accueil() {
     const [selectedTheme, setSelectedTheme] = useState("");
@@ -17,12 +17,12 @@ export default function Accueil() {
     return (
         <>
             <div className="background">
-          <ModalVideo/>
+                <ModalVideo />
                 <div className="container">
                     <h1 className="title">PUZZEN</h1>
                     <p className="explication">
-                        Bienvenue dans notre jeu ! Détendez-vous, profitez des magnifiques
-            paysages naturels tout en s'amusant ! 🌺
+                        Bienvenue dans notre jeu ! Détendez-vous, profitez des
+                        magnifiques paysages naturels tout en s'amusant ! 🌺
                     </p>
                     <div className="select-game">
                         <button

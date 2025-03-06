@@ -1,19 +1,19 @@
 .retour-accueil {
-  background: #fec195;
-  font-weight: 500;
-  color: #181818;
-  cursor: pointer;
-  border: 1px solid #fec195;
-  border-radius: 8px;
-  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
-  width: fit-content;
-  height: fit-content;
-  padding: 16px 32px;
-  position: relative;
-  left: 135%;
-  z-index: 1;
-  top: 5%;
-
+    background: #fec195;
+    font-weight: 500;
+    color: #181818;
+    cursor: pointer;
+    border: 1px solid #fec195;
+    border-radius: 8px;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+    width: fit-content;
+    height: fit-content;
+    padding: 16px 32px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
 }
 
 .retour-accueil:hover {
