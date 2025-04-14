@@ -57,7 +57,7 @@ export default function Modal({ puzzle, setModaleIsVisible, setVisibleTiles }) {
                                 key={img}
                                 className={`images-puzzle ${isSelected ? 'clicked' : ''}`}
                                 onClick={() => handleClickPiece(img)}
-                                src={`puzzles/${puzzle.id}-${img}.jpg`} // ✅ chemin relatif
+                                src={`${import.meta.env.BASE_URL}puzzles/${puzzle.id}-${img}.jpg`} // ✅ chemin relatif
                                 alt="pièce de puzzle"
                             />
                         );

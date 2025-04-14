@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Modal from "../components/Modal";
 import RetourAccueil from "../components/RetourAccueil";
@@ -10,7 +10,7 @@ export default function GamePage() {
   const [modaleIsVisible, setModaleIsVisible] = useState(false);
   const [puzzle, setPuzzle] = useState(null);
   const [visibleTiles, setVisibleTiles] = useState([false, false, false]);
-const { themeUnlock, setThemeUnlock } = useContext(ThemeContext);
+// const { themeUnlock, setThemeUnlock } = useContext(ThemeContext);
 
     
 
