@@ -8,37 +8,34 @@ import Homepage from "./pages/Homepage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import themes from "./themes/themes.js";
 
-const router = createBrowserRouter(
-  [
+const router = createBrowserRouter([
     {
-      element: <App />,
-      children: [
-        {
-          path: "/",
-          element: <Homepage />,
-        },
-        {
-          path: "gamepage/:theme",
-          element: <GamePage />,
-          loader: (route) => {
-            const theme = route.params.theme;
-            return themes[theme];
-          },
-        },
-        {
-          path: "*",
-          element: <NotFoundPage />,
-        },
-      ],
+        element: <App />,
+        children: [
+            {
+                path: "/",
+                element: <Homepage />,
+            },
+            {
+                path: "gamepage/:theme",
+                element: <GamePage />,
+                loader: (route) => {
+                    const theme = route.params.theme;
+                    return themes[theme];
+                },
+            },
+            {
+                path: "*",
+                element: <NotFoundPage />,
+            },
+        ],
     },
-  ],
-  {
-    basename: "/hackaton-puzzlegame", // Base path GitHub Pages
-  }
-);
+], {
+    basename: "/hackaton-puzzlegame", // Important : base URL pour GitHub Pages
+});
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>
+    <StrictMode>
+        <RouterProvider router={router} />
+    </StrictMode>
 );
