@@ -41,10 +41,10 @@ export default function Modal({ puzzle, setModaleIsVisible, setVisibleTiles }) {
         <div className="modal-container">
             <div className="modal">
                 <img 
-                className="cross" 
-                src={cross} 
-                alt="croix fermeture" 
-                onClick={() => setModaleIsVisible(false)}
+                    className="cross" 
+                    src={cross} 
+                    alt="croix fermeture" 
+                    onClick={() => setModaleIsVisible(false)}
                 />
                 <span className={`finish-message ${messageVisible ? 'finish' : ''}`}>
                     Félicitations, vous avez terminé le puzzle !
@@ -57,7 +57,7 @@ export default function Modal({ puzzle, setModaleIsVisible, setVisibleTiles }) {
                                 key={img}
                                 className={`images-puzzle ${isSelected ? 'clicked' : ''}`}
                                 onClick={() => handleClickPiece(img)}
-                                src={`/puzzles/${puzzle.id}-${img}.jpg`}
+                                src={`puzzles/${puzzle.id}-${img}.jpg`} // ✅ chemin relatif
                                 alt="pièce de puzzle"
                             />
                         );
